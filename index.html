@@ -22,12 +22,11 @@
   <li>7. play useless games </li>
   <li>8. binge watch for concerning lengths of time </li>
   <li>9. waste your time worrying about wasting your time </b> </li>
-<h3> <b>So I tried to make a table, but I failed miserably... </b> </h3>
-   |why|won't|this work!!!!!!!!!|
-   |---|-----|---------|
+<h3> <b>I finally made the table, but the code shows up here idk why...</b></h3>
+<p>
 require 'html/table'
 include HTML
-<p>
+
 # Explicit syntax
 table = HTML::Table.new{ |t|
   t.border  = 1
@@ -49,7 +48,7 @@ table.push Table::Row.new{ |r|
 row = Table::Row.new{ |r|
   r.align   = "right"
   r.bgcolor = "blue"
-  r.content = ["what", "this", "is"]
+  r.content = ["what","this","is"]
 }
 
 table[1] = row
@@ -57,16 +56,16 @@ table[1] = row
 puts table.html
 
 # Output
-<table border=1 bgcolor='red' font color = 'black'> 
+<table border=1 bgcolor='red' font color = 'black'>
    <tr align='left' bgcolor='green'>  # row 0
-      <td>I</td>                    # column 0
-      <td>D</td>                    # column 1
-      <td>K</td>                    # column 2
+      <td>foo</td>                    # column 0
+      <td>bar</td>                    # column 1
+      <td>baz</td>                    # column 2
    </tr>
    <tr align='right' bgcolor='blue'>  # row 1
-      <td>what</td>                 # column 0
-      <td>this</td>                 # column 1
-      <td>is</td>                   # column 2
+      <td>what</td>            # column 0
+      <td>this</td>            # column 1
+      <td>is</td>            # column 2
    </tr>
 </table>
 	 </p>
