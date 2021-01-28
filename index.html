@@ -27,13 +27,11 @@
 require 'html/table'
 include HTML
 
-# Explicit syntax
 table = HTML::Table.new{ |t|
   t.border  = 1
   t.bgcolor = "red"
 }
 
-# Implicit syntax
 table = HTML::Table.new do
   border   1
   bgcolor 'red'
@@ -56,7 +54,7 @@ table[1] = row
 puts table.html
 
 # Output
-<table border=1 bgcolor='red' font color = 'black'>
+<table border=1 bgcolor='yellow' font color = 'black'>
    <tr align='left' bgcolor='green'>  # row 0
       <td>foo</td>                    # column 0
       <td>bar</td>                    # column 1
