@@ -24,38 +24,10 @@
   <li>9. waste your time worrying about wasting your time </b> </li>
 <h3> <b>I made a table...FINALLY!</b></h3>
 
-# Implicit Syntax
-require 'html/table'
-include HTML
-
-table = HTML::Table.new{ |t|
-  t.border  = 1
-  t.bgcolor = "red"
-}
-
-table = HTML::Table.new do
-  border   1
-  bgcolor 'red'
-end
-
-table.push Table::Row.new{ |r|
-  r.align   = "left"
-  r.bgcolor = "green"
-  r.content = ["I","D","K"]
-}
-
-row = Table::Row.new{ |r|
-  r.align   = "right"
-  r.bgcolor = "blue"
-  r.content = ["what","this","is"]
-}
-
-table[1] = row
-
 puts table.html
 
 # Output
-<table border=1 bgcolor='yellow' font color = 'black'>
+<table border=1 bgcolor='yellow' font color = 'yellow'>
    <tr align='left' bgcolor='green'>  # row 0
       <td>I</td>                    # column 0
       <td>D</td>                    # column 1
