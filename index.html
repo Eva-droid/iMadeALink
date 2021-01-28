@@ -25,7 +25,7 @@
 <h3> <b>So I tried to make a table, but I failed miserably... </b> </h3>
    |why|won't|this work!!!!!!!!!!|
    |---|-----|---------|
-	 require 'html/table'
+require 'html/table'
 include HTML
 
 # Explicit syntax
@@ -43,13 +43,13 @@ end
 table.push Table::Row.new{ |r|
   r.align   = "left"
   r.bgcolor = "green"
-  r.content = ["foo","bar","baz"]
+  r.content = ["I","D","K"]
 }
 
 row = Table::Row.new{ |r|
   r.align   = "right"
   r.bgcolor = "blue"
-  r.content = "hello world"
+  r.content = ["what", "this", "is"]
 }
 
 table[1] = row
@@ -59,12 +59,14 @@ puts table.html
 # Output
 <table border=1 bgcolor='red'>
    <tr align='left' bgcolor='green'>  # row 0
-      <td>foo</td>                    # column 0
-      <td>bar</td>                    # column 1
-      <td>baz</td>                    # column 2
+      <td>I</td>                    # column 0
+      <td>D</td>                    # column 1
+      <td>K</td>                    # column 2
    </tr>
    <tr align='right' bgcolor='blue'>  # row 1
-      <td>hello world</td>            # column 0
+      <td>what</td>                 # column 0
+      <td>this</td>                 # column 1
+      <td>is</td>                   # column 2
    </tr>
 </table>
 </ul>
